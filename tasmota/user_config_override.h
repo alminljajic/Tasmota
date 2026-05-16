@@ -89,6 +89,61 @@ Examples :
 
 
 
+#ifdef FIRMWARE_SMARTMETER
+    #ifndef USE_SCRIPT
+      #define USE_SCRIPT
+    #endif
+    #ifndef USE_SML_M
+      #define USE_SML_M
+    #endif
+    #ifdef USE_RULES
+      #undef USE_RULES
+    #endif
+#endif
+
+#ifdef FIRMWARE_MODBUSBRIDGE
+    #ifndef USE_SCRIPT
+      #define USE_SCRIPT
+    #endif
+    #ifndef USE_MODBUS_BRIDGE    
+      #define USE_MODBUS_BRIDGE
+    #endif
+    #ifndef USE_MODBUS_BRIDGE_TCP    
+      #define USE_MODBUS_BRIDGE_TCP    
+    #endif
+    #ifdef USE_RULES
+      #undef USE_RULES
+    #endif
+#endif
+
+#ifdef USE_DOMOTICZ
+#undef USE_DOMOTICZ                              
+#endif 
+#ifdef USE_KNX_WEB_MENU
+#undef USE_KNX_WEB_MENU                              
+#endif 
+#ifdef USE_AUTOCONF
+#undef USE_AUTOCONF                              
+#endif 
+#ifdef USE_MATTER_DEVICE
+#undef USE_MATTER_DEVICE                              
+#endif 
+#ifdef USE_MATTER
+#undef USE_MATTER
+#endif 
+#ifdef USE_EMULATION_HUE
+#undef USE_EMULATION_HUE
+#endif
+#ifdef USE_EMULATION_WEMO
+#undef USE_EMULATION_WEMO
+#endif
+#ifdef USE_TIMERS
+#undef USE_TIMERS
+#endif
+#ifdef USE_TIMERS_WEB
+#undef USE_TIMERS_WEB
+#endif
+
 
 
 #endif  // _USER_CONFIG_OVERRIDE_H_
